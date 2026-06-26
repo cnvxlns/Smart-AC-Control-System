@@ -6,6 +6,7 @@
 - **RTOS**: uC/OS-III
 - **드라이버**: STM32 StdPeriph
 - **툴체인**: TrueSTUDIO(GCC, 기본) / IAR / Keil MDK
+- **시연 영상**: https://www.youtube.com/shorts/Qt6jEE1qyok
 
 > 이 프로젝트는 Micrium의 **STM32F429II-SK** 예제를 NUCLEO-F429ZI로 이식한 것입니다. BSP·포트는 SK 보드 기준이라 몇 가지 보드 차이 대응이 필요합니다([주의사항](#주의사항--known-issues) 참고).
 
