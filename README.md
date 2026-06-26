@@ -1,6 +1,6 @@
 # SmartAC — uC/OS-III 기반 스마트 에어컨 제어 펌웨어
 
-`app.c` 단일 파일로 구현된 스마트 에어컨 컨트롤러입니다. DHT22 온습도 센서와 리드(창문) 스위치, 버튼 입력을 받아 냉방 상태 머신을 돌리고, 결과를 온보드 LED·외부 부저·TM1637 4-digit 7-세그먼트에 표시하며, UART로 진단 로그를 출력합니다.
+기능 단위 모듈로 분리된 스마트 에어컨 컨트롤러입니다. DHT22 온습도 센서와 리드(창문) 스위치, 버튼 입력을 받아 냉방 상태 머신을 돌리고, 결과를 온보드 LED·외부 부저·TM1637 4-digit 7-세그먼트에 표시하며, UART로 진단 로그를 출력합니다.
 
 - **타깃 보드**: NUCLEO-F429ZI (STM32F429ZI, Cortex-M4F)
 - **RTOS**: uC/OS-III
@@ -154,7 +154,7 @@ us_timer_ready=1 us_ticks_100ms=100000 sensor_stk_free=953 tm1637_ack=7 raw=2,14
 
 ---
 
-## 진단용 컴파일 스위치 (`app.c` 상단 `#define`)
+## 진단용 컴파일 스위치 (`app_config.h`)
 
 | 매크로 | 기본값 | 설명 |
 |---|---|---|
@@ -171,7 +171,7 @@ us_timer_ready=1 us_ticks_100ms=100000 sensor_stk_free=953 tm1637_ack=7 raw=2,14
 이식 과정에서 해결한/유의할 보드 차이:
 
 1. **소프트웨어 float 필수** — non-FPU 포트 + 하드웨어 FPU 조합은 간헐적 INVSTATE HardFault. (위 [빌드 설정](#부동소수점-설정--중요) 참고)
-2. **FPU 활성화** — `App_FpuEnable()`가 CPACR로 FPU를 켭니다(이 BSP의 Reset_Handler는 `SystemInit` 호출이 비활성이라). soft-float에서는 무해하며, 혹시 hard-float로 남았을 때의 NOCP 폴트를 막는 보호막 역할.
+2. **FPU 활성화** — `Board_EnableFpu()`가 CPACR로 FPU를 켭니다(이 BSP의 Reset_Handler는 `SystemInit` 호출이 비활성이라). soft-float에서는 무해하며, 혹시 hard-float로 남았을 때의 NOCP 폴트를 막는 보호막 역할.
 3. **TM1637 전원 3.3V** + **CLK push-pull** + **비트주기 50 µs** — 약한 내부 풀업/느린 엣지로 인한 데이터 깨짐 방지.
 4. **B1 극성** — NUCLEO-144는 active-high(풀다운). NUCLEO-64 계열과 반대.
 
@@ -181,12 +181,20 @@ us_timer_ready=1 us_ticks_100ms=100000 sensor_stk_free=953 tm1637_ack=7 raw=2,14
 
 | 파일 | 내용 |
 |---|---|
-| `app.c` | 애플리케이션 전체(상태 머신, 태스크, 드라이버, 진단) |
+| `app.c` | 애플리케이션 시작점(`main`, `App_Start`) |
+| `app_config.h` | 타이밍, 핀맵, 태스크, 큐, 진단 매크로 |
+| `app_messages.h` | 태스크 간 메시지와 사용자 이벤트 타입 |
+| `app_control.c/.h` | 순수 상태 머신과 냉방 제어 로직 |
+| `app_board.c/.h` | STM32 GPIO/UART/TIM/EXTI 초기화와 보드 헬퍼 |
+| `app_dht22.c/.h` | DHT22 프로토콜과 센서 진단값 |
+| `app_tm1637.c/.h` | TM1637 표시 프로토콜과 렌더링 |
+| `app_actuator.c/.h` | LED와 부저 출력 |
+| `app_monitor.c/.h` | UART 진단 로그 출력 |
+| `app_tasks.c/.h` | uC/OS-III 태스크, 큐, 플래그, 런타임 카운터 |
+| `app_fault.c/.h` | HardFault 진단 덤프 |
 | `app_origin.c` | 이식 전 원본 참고본 |
 | `app_cfg.h`, `os_cfg*.h`, `cpu_cfg.h`, `lib_cfg.h` | uC/OS-III · CPU · LIB 설정 |
 | `os_app_hooks.c/.h` | OS 훅 |
 | `includes.h` | 공통 인클루드 |
 | `TrueSTUDIO/`, `IAR/`, `KeilMDK/` | IDE별 프로젝트 |
 | `SmartAC_changes_summary.md` | 변경 이력 메모 |
-
-> 애플리케이션 고유 코드는 의도적으로 `app.c` 한 파일에 모아두었습니다.

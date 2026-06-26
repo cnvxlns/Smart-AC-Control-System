@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+	<storageModule moduleId="org.eclipse.cdt.core.settings">
+		<cconfiguration id="com.atollic.truestudio.exe.0">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.atollic.truestudio.exe.0" moduleId="org.eclipse.cdt.core.settings" name="Debug">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactExtension="elf" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe" cleanCommand="rm -rf" description="" id="com.atollic.truestudio.exe.0" name="Debug" parent="com.atollic.truestudio.exe.debug">
+					<folderInfo id="com.atollic.truestudio.exe.0." name="/" resourcePath="">
+						<toolChain id="com.atollic.truestudio.exe.debug.toolchain.14273127" name="Atollic ARM Tools" superClass="com.atollic.truestudio.exe.debug.toolchain">
+							<option id="com.atollic.truestudio.general.runtimelib.2129812699" superClass="com.atollic.truestudio.general.runtimelib" value="com.atollic.truestudio.ld.general.cclib.CCSmallCSmall" valueType="enumerated"/>
+							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="com.atollic.truestudio.exe.debug.toolchain.platform.383091992" isAbstract="false" name="Debug platform" osList="all" superClass="com.atollic.truestudio.exe.debug.toolchain.platform"/>
+							<builder buildPath="${workspace_loc:/Smart-AC-Control-System}/Debug" id="com.atollic.truestudio.mbs.builder1.1195629127" name="CDT Internal Builder.Debug" superClass="com.atollic.truestudio.mbs.builder1"/>
+							<tool id="com.atollic.truestudio.exe.debug.toolchain.as.2019226106" name="Assembler" superClass="com.atollic.truestudio.exe.debug.toolchain.as">
+								<inputType id="com.atollic.truestudio.as.input.875056164" name="Input" superClass="com.atollic.truestudio.as.input"/>
+							</tool>
+							<tool id="com.atollic.truestudio.exe.debug.toolchain.gcc.1153842638" name="C Compiler" superClass="com.atollic.truestudio.exe.debug.toolchain.gcc">
+								<option id="com.atollic.truestudio.gcc.symbols.defined.smartac.debug" name="Defined symbols" superClass="com.atollic.truestudio.gcc.symbols.defined" useByScannerDiscovery="false" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="STM32F42_43xxx"/>
+									<listOptionValue builtIn="false" value="USE_STDPERIPH_DRIVER"/>
+								</option>
+								<option id="com.atollic.truestudio.gcc.directories.select.smartac.debug" name="Include path" superClass="com.atollic.truestudio.gcc.directories.select" useByScannerDiscovery="false" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;C:/Git-hub/2026-Embedded-System-Lecture/lab05/Examples/ST/STM32F429II-SK/OS3&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:/Git-hub/2026-Embedded-System-Lecture/lab05/Examples/ST/STM32F429II-SK/BSP&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:/Git-hub/2026-Embedded-System-Lecture/lab05/Examples/ST/STM32F429II-SK/BSP/ST/STM32F4xx/inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:/Git-hub/2026-Embedded-System-Lecture/lab05/Examples/ST/STM32F429II-SK/BSP/ST/STM32F4xx/src&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:/Git-hub/2026-Embedded-System-Lecture/lab05/Examples/ST/STM32F429II-SK/BSP/TrueSTUDIO&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:/Git-hub/2026-Embedded-System-Lecture/lab05/Software/uC-CPU/ARM-Cortex-M4/GNU&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:/Git-hub/2026-Embedded-System-Lecture/lab05/Software/uC-CPU&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:/Git-hub/2026-Embedded-System-Lecture/lab05/Software/uC-LIB&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:/Git-hub/2026-Embedded-System-Lecture/lab05/Software/uC-LIB/Ports/ARM-Cortex-M4/GNU&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:/Git-hub/2026-Embedded-System-Lecture/lab05/Software/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:/Git-hub/2026-Embedded-System-Lecture/lab05/Software/uCOS-III/Source&quot;"/>
+								</option>
+								<inputType id="com.atollic.truestudio.gcc.input.1327759014" superClass="com.atollic.truestudio.gcc.input"/>
+							</tool>
+							<tool id="com.atollic.truestudio.exe.debug.toolchain.ld.18889401" name="C Linker" superClass="com.atollic.truestudio.exe.debug.toolchain.ld"/>
+							<tool id="com.atollic.truestudio.exe.debug.toolchain.gpp.1203952008" name="C++ Compiler" superClass="com.atollic.truestudio.exe.debug.toolchain.gpp">
+								<inputType id="com.atollic.truestudio.gpp.input.1708201522" superClass="com.atollic.truestudio.gpp.input"/>
+							</tool>
+							<tool id="com.atollic.truestudio.exe.debug.toolchain.ldcc.349778292" name="C++ Linker" superClass="com.atollic.truestudio.exe.debug.toolchain.ldcc">
+								<inputType id="com.atollic.truestudio.ldcc.input.1224798742" name="Input" superClass="com.atollic.truestudio.ldcc.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+								</inputType>
+							</tool>
+							<tool id="com.atollic.truestudio.ar.base.1847762238" name="Archiver" superClass="com.atollic.truestudio.ar.base"/>
+							<tool id="com.atollic.truestudio.exe.debug.toolchain.secoutput.610221300" name="Other" superClass="com.atollic.truestudio.exe.debug.toolchain.secoutput"/>
+						</toolChain>
+					</folderInfo>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+		<cconfiguration id="com.atollic.truestudio.exe.1">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.atollic.truestudio.exe.1" moduleId="org.eclipse.cdt.core.settings" name="Release">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactExtension="elf" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe" cleanCommand="rm -rf" description="" id="com.atollic.truestudio.exe.1" name="Release" parent="com.atollic.truestudio.configuration.release">
+					<folderInfo id="com.atollic.truestudio.exe.1." name="/" resourcePath="">
+						<toolChain id="com.atollic.truestudio.exe.release.toolchain.939500249" name="Atollic ARM Tools" superClass="com.atollic.truestudio.exe.release.toolchain">
+							<option id="com.atollic.truestudio.general.runtimelib.475833699" superClass="com.atollic.truestudio.general.runtimelib" value="com.atollic.truestudio.ld.general.cclib.CCSmallCSmall" valueType="enumerated"/>
+							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="com.atollic.truestudio.exe.release.toolchain.platform.538534155" isAbstract="false" name="release platform" superClass="com.atollic.truestudio.exe.release.toolchain.platform"/>
+							<builder buildPath="${workspace_loc:/Smart-AC-Control-System}/Release" id="com.atollic.truestudio.mbs.builder1.178107132" name="CDT Internal Builder.Release" superClass="com.atollic.truestudio.mbs.builder1"/>
+							<tool id="com.atollic.truestudio.exe.release.toolchain.as.1315333379" name="Assembler" superClass="com.atollic.truestudio.exe.release.toolchain.as">
+								<inputType id="com.atollic.truestudio.as.input.117024237" name="Input" superClass="com.atollic.truestudio.as.input"/>
+							</tool>
+							<tool id="com.atollic.truestudio.exe.release.toolchain.gcc.2101190792" name="C Compiler" superClass="com.atollic.truestudio.exe.release.toolchain.gcc">
+								<option id="com.atollic.truestudio.gcc.symbols.defined.smartac.release" name="Defined symbols" superClass="com.atollic.truestudio.gcc.symbols.defined" useByScannerDiscovery="false" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="STM32F42_43xxx"/>
+									<listOptionValue builtIn="false" value="USE_STDPERIPH_DRIVER"/>
+								</option>
+								<option id="com.atollic.truestudio.gcc.directories.select.smartac.release" name="Include path" superClass="com.atollic.truestudio.gcc.directories.select" useByScannerDiscovery="false" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;C:/Git-hub/2026-Embedded-System-Lecture/lab05/Examples/ST/STM32F429II-SK/OS3&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:/Git-hub/2026-Embedded-System-Lecture/lab05/Examples/ST/STM32F429II-SK/BSP&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:/Git-hub/2026-Embedded-System-Lecture/lab05/Examples/ST/STM32F429II-SK/BSP/ST/STM32F4xx/inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:/Git-hub/2026-Embedded-System-Lecture/lab05/Examples/ST/STM32F429II-SK/BSP/ST/STM32F4xx/src&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:/Git-hub/2026-Embedded-System-Lecture/lab05/Examples/ST/STM32F429II-SK/BSP/TrueSTUDIO&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:/Git-hub/2026-Embedded-System-Lecture/lab05/Software/uC-CPU/ARM-Cortex-M4/GNU&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:/Git-hub/2026-Embedded-System-Lecture/lab05/Software/uC-CPU&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:/Git-hub/2026-Embedded-System-Lecture/lab05/Software/uC-LIB&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:/Git-hub/2026-Embedded-System-Lecture/lab05/Software/uC-LIB/Ports/ARM-Cortex-M4/GNU&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:/Git-hub/2026-Embedded-System-Lecture/lab05/Software/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:/Git-hub/2026-Embedded-System-Lecture/lab05/Software/uCOS-III/Source&quot;"/>
+								</option>
+								<inputType id="com.atollic.truestudio.gcc.input.578980117" superClass="com.atollic.truestudio.gcc.input"/>
+							</tool>
+							<tool id="com.atollic.truestudio.exe.release.toolchain.ld.1927913894" name="C Linker" superClass="com.atollic.truestudio.exe.release.toolchain.ld"/>
+							<tool id="com.atollic.truestudio.exe.release.toolchain.gpp.865461996" name="C++ Compiler" superClass="com.atollic.truestudio.exe.release.toolchain.gpp">
+								<inputType id="com.atollic.truestudio.gpp.input.458137033" superClass="com.atollic.truestudio.gpp.input"/>
+							</tool>
+							<tool id="com.atollic.truestudio.exe.release.toolchain.ldcc.1898988363" name="C++ Linker" superClass="com.atollic.truestudio.exe.release.toolchain.ldcc">
+								<inputType id="com.atollic.truestudio.ldcc.input.1888868252" name="Input" superClass="com.atollic.truestudio.ldcc.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+								</inputType>
+							</tool>
+							<tool id="com.atollic.truestudio.ar.base.541347792" name="Archiver" superClass="com.atollic.truestudio.ar.base"/>
+							<tool id="com.atollic.truestudio.exe.release.toolchain.secoutput.1272278911" name="Other" superClass="com.atollic.truestudio.exe.release.toolchain.secoutput"/>
+						</toolChain>
+					</folderInfo>
+				</configuration>
+			</storageModule>
+		</cconfiguration>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+	<storageModule moduleId="org.eclipse.cdt.core.pathentry"/>
+	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+		<project id="Smart-AC-Control-System.com.atollic.truestudio.exe.2047771271" name="Executable" projectType="com.atollic.truestudio.exe"/>
+	</storageModule>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		<scannerConfigBuildInfo instanceId="com.atollic.truestudio.exe.0;com.atollic.truestudio.exe.0.;com.atollic.truestudio.exe.debug.toolchain.gpp.1203952008;com.atollic.truestudio.gpp.input.1708201522">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.atollic.truestudio.mbs.ARMToolsPerProjectProfileCPP"/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="com.atollic.truestudio.exe.0;com.atollic.truestudio.exe.0.;com.atollic.truestudio.exe.debug.toolchain.gcc.1153842638;com.atollic.truestudio.gcc.input.1327759014">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.atollic.truestudio.mbs.ARMToolsPerProjectProfileC"/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="com.atollic.truestudio.exe.1;com.atollic.truestudio.exe.1.;com.atollic.truestudio.exe.release.toolchain.gpp.865461996;com.atollic.truestudio.gpp.input.458137033">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.atollic.truestudio.mbs.ARMToolsPerProjectProfileCPP"/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="com.atollic.truestudio.exe.1;com.atollic.truestudio.exe.1.;com.atollic.truestudio.exe.release.toolchain.gcc.2101190792;com.atollic.truestudio.gcc.input.578980117">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.atollic.truestudio.mbs.ARMToolsPerProjectProfileC"/>
+		</scannerConfigBuildInfo>
+	</storageModule>
+</cproject>

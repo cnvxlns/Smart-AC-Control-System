@@ -1,0 +1,29 @@
+# TrueSTUDIO / Eclipse build output
+/Debug/
+/Release/
+/.metadata/
+
+# ARM GCC / linker artifacts
+*.o
+*.d
+*.su
+*.elf
+*.map
+*.bin
+*.hex
+*.list
+*.lst
+
+# Generated logs and temporary files
+*_converter.log
+*.log
+*.tmp
+*.bak
+*.swp
+*~
+
+# Local host-test artifacts
+app_test.c
+app_test.exe
+app_test.i
+*_host.o
